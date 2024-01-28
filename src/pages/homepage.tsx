@@ -7,10 +7,10 @@ const Homepage = () => {
         <MDBContainer fluid className="my-5">
             <MDBRow className="d-flex justify-content-center align-items-center my-5">
                 <MDBCol md="6" className="justify-content-center my-5">
-                    <h1 className="text-center">Let's split the bills not the friendships.</h1>
+                    <h1 className="text-center fw-bolder">Let's split the bills not the friendships.</h1>
                     <p className="text-center">We organize your bills, so you can chill.</p>
                     <div className="d-flex justify-content-center">
-                        <Link to="/register" type="button" className="btn btn-outline-success">Get
+                        <Link to="/register" type="button" className="btn btn-outline-primary">Get
                             Started</Link>
                     </div>
                 </MDBCol>
