@@ -37,9 +37,11 @@ const Navbar = () => {
                 <MDBCollapse navbar open={openNav}>
                     <MDBNavbarNav className="justify-content-center">
                         <MDBNavbarItem>
-                            <MDBNavbarLink aria-current='page' href='#'>
-                                Dashboard
-                            </MDBNavbarLink>
+                            <Link to="/dashboard">
+                                <MDBNavbarLink aria-current='page'>
+                                    Dashboard
+                                </MDBNavbarLink>
+                            </Link>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
                             <MDBNavbarLink href='#'>Profile</MDBNavbarLink>

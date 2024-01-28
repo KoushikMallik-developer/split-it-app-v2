@@ -1,4 +1,4 @@
-import {MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
+import {MDBBtn, MDBCol, MDBContainer, MDBRow} from "mdb-react-ui-kit";
 import logo from "../assets/brand/brand-big.png";
 import {Link} from "react-router-dom";
 
@@ -10,8 +10,11 @@ const Homepage = () => {
                     <h1 className="text-center fw-bolder">Let's split the bills not the friendships.</h1>
                     <p className="text-center">We organize your bills, so you can chill.</p>
                     <div className="d-flex justify-content-center">
-                        <Link to="/register" type="button" className="btn btn-outline-primary">Get
-                            Started</Link>
+                        <Link to="/register">
+                            <MDBBtn className="btn-outline-primary">
+                                Get Started
+                            </MDBBtn>
+                        </Link>
                     </div>
                 </MDBCol>
                 <MDBCol md="6" className="d-flex justify-content-center align-items-center my-5">
