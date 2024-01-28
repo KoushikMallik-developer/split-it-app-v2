@@ -8,6 +8,7 @@ const RegisterForm = () => {
                 <MDBCol md={3}></MDBCol>
                 <MDBCol md={6}>
                     <h3 className="text-center fw-bolder mt-2 mb-2">Register </h3>
+                    <h6 className="text-center">Say goodbye to the complexities of splitting bills.</h6>
                     <form className="my-5">
                         <MDBRow className='mb-4'>
                             <MDBCol>
