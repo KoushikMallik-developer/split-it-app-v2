@@ -14,7 +14,7 @@ const SettledGroupCard = () => {
                 <div className="d-flex text-black">
                     <div className="flex-shrink-0 text-center">
                         <MDBCardImage
-                            style={{width: '`75px', borderRadius: '10px'}}
+                            style={{width: '75px', borderRadius: '10px'}}
                             src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp'
                             alt='Generic placeholder image'
                             fluid/>
