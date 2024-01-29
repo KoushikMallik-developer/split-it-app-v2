@@ -62,7 +62,7 @@ const GroupChart = () => {
         },
     };
     return (
-        <div style={{maxHeight: "250px"}}>
+        <div style={{maxHeight: "300px"}}>
             {/*<h6 className="text-center">Bar Chart Example</h6>*/}
             <Bar options={options} data={data}/>;
         </div>
