@@ -1,9 +1,10 @@
 import {MDBListGroup, MDBListGroupItem} from "mdb-react-ui-kit";
 import {Link} from "react-router-dom";
 
-const DashboardLeftNavbar = () => {
+const DashboardLeftNavbar = (props: any) => {
     return (
-        <MDBListGroup light className="shadow-5-strong my-5">
+        <MDBListGroup light
+                      className={props.isMobile ? "dashboard-left-side-navbar shadow-5-strong my-2" : "shadow-5-strong my-2"}>
             <MDBListGroupItem noBorders className="bg-transparent shadow-5-strong">
                 <Link to="/dashboard" className="text-dark">Dashboard</Link>
             </MDBListGroupItem>

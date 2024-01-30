@@ -13,37 +13,45 @@ import DashboardMainContent from "../components/dashboard_page_components/dashbo
 import {useLocation} from "react-router-dom";
 import GroupsMainContent from "../components/dashboard_page_components/groups_main_content.tsx";
 import FriendsMainContent from "../components/dashboard_page_components/friends_main_content.tsx";
+import {useState} from "react";
+import AddGroupModalForm from "../components/dashboard_page_components/add_group_modal_form.tsx";
 
 const Dashboard = () => {
     const isMobile = useMediaQuery({query: '(max-width: 1224px)'});
     const location = useLocation();
     const {pathname} = location;
-    return (
-        <MDBContainer fluid className={isMobile ? "mb-5" : "px-5 mb-5"}>
-            <MDBRow className={isMobile ? "my-4" : "px-5 my-4"}>
-                <MDBCol md={2} className="justify-content-center align-items-center text-center my-3">
-                    <UserCard/>
-                    <DashboardLeftNavbar/>
-                </MDBCol>
-                <MDBCol md={7} className="px-4 mb-5">
-                    {pathname.includes("dashboard") ?
-                        <DashboardMainContent/>
-                        :
-                        pathname.includes("groups") ?
-                            <GroupsMainContent/>
-                            : pathname.includes("friends") ?
-                                <FriendsMainContent/>
-                                : <></>
-                    }
+    const [centredModal, setCentredModal] = useState(false);
 
-                </MDBCol>
-                <MDBCol md={3} className="my-3">
-                    <BalanceCard/>
-                    <FriendList/>
-                    <GroupList/>
-                </MDBCol>
-            </MDBRow>
-        </MDBContainer>
+    const toggleOpen = () => setCentredModal(!centredModal);
+    return (
+        <>
+            <MDBContainer fluid className={isMobile ? "mb-5" : "px-5 mb-5"}>
+                <MDBRow className={isMobile ? "my-4" : "px-5 my-4"}>
+                    <MDBCol md={2} className="justify-content-center align-items-center text-center my-3">
+                        <UserCard/>
+                        <DashboardLeftNavbar isMobile={isMobile}/>
+                    </MDBCol>
+                    <MDBCol md={7} className="px-4 mb-5">
+                        {pathname.includes("dashboard") ?
+                            <DashboardMainContent/>
+                            :
+                            pathname.includes("groups") ?
+                                <GroupsMainContent toggleOpen={toggleOpen}/>
+                                : pathname.includes("friends") ?
+                                    <FriendsMainContent/>
+                                    : <></>
+                        }
+
+                    </MDBCol>
+                    <MDBCol md={3} className="my-3">
+                        <BalanceCard/>
+                        <FriendList/>
+                        <GroupList/>
+                    </MDBCol>
+                </MDBRow>
+            </MDBContainer>
+            <AddGroupModalForm centredModal={centredModal} setCentredModal={setCentredModal} toggleOpen={toggleOpen}/>
+        </>
     )
 }
 export default Dashboard

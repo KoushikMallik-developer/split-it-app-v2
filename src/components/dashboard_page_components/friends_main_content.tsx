@@ -1,10 +1,12 @@
 import {MDBBtn, MDBListGroup, MDBListGroupItem, MDBRow} from "mdb-react-ui-kit";
+import DashboardFriendSearch from "./dashboard_friend_search.tsx";
 
 const FriendsMainContent = () => {
     return (
         <div>
-            <h4 className="text-center mt-5 mb-3 shadow-5-strong p-2 fw-bolder">My Friends</h4>
+            <h4 className="text-center mt-5 mb-3 shadow-5-strong p-2 fw-bolder">Friends</h4>
             <MDBRow className="justify-content-center">
+                <DashboardFriendSearch/>
 
                 <MDBListGroup light className='mb-4 p-2'>
                     <MDBListGroupItem noBorders

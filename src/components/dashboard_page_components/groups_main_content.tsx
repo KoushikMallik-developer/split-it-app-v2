@@ -1,11 +1,11 @@
 import {MDBBtn, MDBListGroup, MDBListGroupItem, MDBRow} from "mdb-react-ui-kit";
 
-const GroupsMainContent = () => {
+const GroupsMainContent = (props: any) => {
     return (
         <div>
             <h4 className="text-center mt-5 mb-3 shadow-5-strong p-2 fw-bolder">My Groups</h4>
             <MDBRow className="justify-content-center">
-                <MDBBtn outline rounded color='success' className="my-4 shadow-5-strong" style={{maxWidth: "200px"}}>
+                <MDBBtn outline rounded color='success' className="my-4 shadow-5-strong" style={{maxWidth: "200px"}} onClick={props.toggleOpen}>
                     Add Group
                 </MDBBtn>
                 <MDBListGroup light className='mb-4 p-2'>
