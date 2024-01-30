@@ -14,8 +14,10 @@ function App() {
                 <Header/>
                 <Routes>
                     <Route path="/" element={<Homepage/>}/>
-                    <Route path="/dashboard" element={<Dashboard/>} />
+                    <Route path="/dashboard" element={<Dashboard/>}/>
                     {/*<Route path="/edit-profile" element={<EditProfile/>} />*/}
+                    <Route path="/groups" element={<Dashboard/>}/>
+                    <Route path="/friends" element={<Dashboard/>}/>
                     <Route path="/login" element={<Loginpage/>}/>
                     <Route path="/register" element={<RegisterPage/>}/>
                     {/*<Route path="*" element={<PageNotFound/>} />*/}

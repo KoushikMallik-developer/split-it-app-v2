@@ -1,9 +1,11 @@
 import {MDBListGroup, MDBListGroupItem} from "mdb-react-ui-kit";
+import {Link} from "react-router-dom";
 
 const FriendList = () => {
     return (
         <div>
-            <h6 className='bg-transparent p-2 shadow-5-strong text-center fw-bolder'>My Friends</h6>
+            <Link to="/friends"><h6 className='bg-transparent p-2 shadow-5-strong text-center fw-bolder'>My Friends</h6>
+            </Link>
             <MDBListGroup light className='mb-4 shadow-5-strong'>
                 <MDBListGroupItem noBorders
                                   className='d-flex justify-content-between align-items-center bg-transparent shadow-5-strong'>
